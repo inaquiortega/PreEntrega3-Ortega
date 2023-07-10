@@ -1,0 +1,78 @@
+.body-margins {
+    margin: $size1*4 $size4*2;
+    @media (max-width: 576px) {
+        margin: $size2;
+    }
+}
+
+.main {
+    background-color: $color5;
+    padding: $size2*1.5 $size4;
+    @media (max-width: 576px) {
+        padding: $size2*1.5;
+    }
+}
+
+.nav-logo {
+    width: $size5*3;
+    height: $size4;
+    @media (max-width: 576px) {
+        width: $size5*1.5;
+        height: $size2*2;
+    }
+}
+
+.h1--modif {
+    @extend .h;
+    font-size: $size4*1.5;
+    margin-top: $size3;
+    margin-bottom: $size3;
+    @media (max-width: 576px) {
+        font-size: $size3;
+        margin-top: $size2*1.5;
+        margin-bottom: $size2*1.5;
+    }
+}
+
+.h2--modif {
+    @extend .h;
+    font-size: $size3;
+    margin-bottom: $size2;
+    @media (max-width: 576px) {
+        font-size: $size1*3;
+        margin-top: 0px;
+        margin-bottom: $size2;
+    }
+}
+
+.p-index--modif {
+    @include pg($font, $color3);
+    @media (min-width: 576px) {
+        font-size: $size2*1.2;
+        padding-right: $size1;
+    }
+}
+
+.p--modif {
+    @include pg($font, $color3);
+    @media (max-width: 576px) {
+        font-size: $size1*1.3;
+    }
+}
+
+.p-col--modif {
+    @include pg($font, $color3);
+    padding-right: $size1;
+    @media (max-width: 576px) {
+        font-size: $size1*1.3;
+    }
+}
+
+.copyright {
+    @include pg($font, $color5);
+    position: absolute;
+    font-size: $size1*1.3;
+    @media (max-width: 576px) {
+        font-size: $size1*1.1;
+    }
+}

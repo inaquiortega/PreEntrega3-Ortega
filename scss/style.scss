@@ -1,0 +1,64 @@
+@import './base/vars';
+@import './base/maps';
+@import './base/mixin';
+@import './base/vars';
+@import './base/extend';
+@import './base/ops';
+@import './components/navbar';
+@import './components/cards';
+@import './components/animations';
+
+html {
+    background-color: $color1;
+}
+
+a:link, a:visited {
+    @include links(none, $color5)
+}
+
+.h5--modif {
+    @extend .h;
+}
+
+.col--modif {
+    padding-left: 0 !important;
+    @media (max-width: 576px) {
+        padding-right: 0 !important;
+    }
+}
+
+.col-img--modif {
+    padding: 0 !important;
+}
+
+.contacto-img-size {
+    @media (max-width: 576px) {
+        height: 50%;
+        width: 50%;
+    }
+}
+
+.contacto-button {
+    font-family: map-get($contacto-button, ff);
+    font-size: map-get($contacto-button, fs);
+    line-height: map-get($contacto-button, lh);
+    color: map-get($contacto-button, cl);
+    background-color: map-get($contacto-button, bcl);
+    padding-top: map-get($contacto-button, pt);
+    padding-bottom: map-get($contacto-button, pb);
+    @media (max-width: 576px) {
+        font-size: $size1*1.3;
+    }
+}
+
+ul {
+    list-style: circle;
+    font-family: $font;
+    li {
+        font-weight: $weight1;
+        color: $color3;
+        @media (max-width: 576px) {
+            font-size: $size1*1.3;
+        }
+    }
+}
